@@ -1,0 +1,16 @@
+c:\users\msigamer\documents\visual studio 2015\Projects\ClientTripAdvisor\ClientTripAdvisor\bin\Debug\ClientTripAdvisor.exe.config
+c:\users\msigamer\documents\visual studio 2015\Projects\ClientTripAdvisor\ClientTripAdvisor\bin\Debug\ClientTripAdvisor.exe
+c:\users\msigamer\documents\visual studio 2015\Projects\ClientTripAdvisor\ClientTripAdvisor\bin\Debug\ClientTripAdvisor.pdb
+c:\users\msigamer\documents\visual studio 2015\Projects\ClientTripAdvisor\ClientTripAdvisor\obj\Debug\ClientTripAdvisor.csprojResolveAssemblyReference.cache
+c:\users\msigamer\documents\visual studio 2015\Projects\ClientTripAdvisor\ClientTripAdvisor\obj\Debug\Resto.g.cs
+c:\users\msigamer\documents\visual studio 2015\Projects\ClientTripAdvisor\ClientTripAdvisor\obj\Debug\App.g.cs
+c:\users\msigamer\documents\visual studio 2015\Projects\ClientTripAdvisor\ClientTripAdvisor\obj\Debug\ClientTripAdvisor_MarkupCompile.cache
+c:\users\msigamer\documents\visual studio 2015\Projects\ClientTripAdvisor\ClientTripAdvisor\obj\Debug\ClientTripAdvisor_MarkupCompile.lref
+c:\users\msigamer\documents\visual studio 2015\Projects\ClientTripAdvisor\ClientTripAdvisor\obj\Debug\Resto.baml
+c:\users\msigamer\documents\visual studio 2015\Projects\ClientTripAdvisor\ClientTripAdvisor\obj\Debug\ClientTripAdvisor.g.resources
+c:\users\msigamer\documents\visual studio 2015\Projects\ClientTripAdvisor\ClientTripAdvisor\obj\Debug\ClientTripAdvisor.Properties.Resources.resources
+c:\users\msigamer\documents\visual studio 2015\Projects\ClientTripAdvisor\ClientTripAdvisor\obj\Debug\ClientTripAdvisor.csproj.GenerateResource.Cache
+c:\users\msigamer\documents\visual studio 2015\Projects\ClientTripAdvisor\ClientTripAdvisor\obj\Debug\ClientTripAdvisor.exe
+c:\users\msigamer\documents\visual studio 2015\Projects\ClientTripAdvisor\ClientTripAdvisor\obj\Debug\ClientTripAdvisor.pdb
+C:\Users\MSIgamer\documents\visual studio 2015\Projects\ClientTripAdvisor\ClientTripAdvisor\bin\Debug\Newtonsoft.Json.dll
+C:\Users\MSIgamer\documents\visual studio 2015\Projects\ClientTripAdvisor\ClientTripAdvisor\bin\Debug\Newtonsoft.Json.xml
