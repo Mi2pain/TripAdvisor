@@ -43,28 +43,31 @@
             </TabItem>
             <TabItem Header="Un restaurant">
                 <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
                     <ComboBox x:Name="Id_ComboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="0,10,0,0" SelectionChanged="Id_ComboBox_SelectionChanged" ItemsSource="{Binding}" DisplayMemberPath="RES_ID"/>
-                    <Button x:Name="Afficher" Content="Afficher" Margin="135,0,0,217.12" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="75" Click="Afficher_Click"/>
-                    <TextBlock x:Name="Prix_TextBlock" HorizontalAlignment="Left" Margin="10,41.08,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="15.92"><Run Text="Prix"/><LineBreak/><Run/></TextBlock>
-                    <TextBox x:Name="Prix_TextBox" Height="15.92" Margin="44,41.08,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="67"/>
-                    <TextBlock x:Name="Nom_TextBlock" HorizontalAlignment="Left" Height="15.92" Margin="135,41.08,0,0" TextWrapping="Wrap" Text="Nom" VerticalAlignment="Top" Width="31"/>
-                    <TextBox x:Name="Nom_TextBox" Height="15.92" Margin="171,41.08,225,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-                    <TextBlock x:Name="Cat_TextBlock" HorizontalAlignment="Right" Margin="0,41.08,121.693,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="15.92" Text="Catégorie prix" d:LayoutOverrides="HorizontalAlignment"/>
-                    <TextBox x:Name="Cat_TextBox" Height="15.92" Margin="0,41.08,10,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Right" Width="93"/>
-                    <TextBlock x:Name="Description_TextBlock" HorizontalAlignment="Left" Margin="10,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="15.92" Text="Description"/>
-                    <TextBox x:Name="Description_TextBox" Height="37.92" Margin="75.253,62,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-                    <TextBlock x:Name="Adresse_TextBlock" HorizontalAlignment="Left" Margin="10,112,0,119.16" TextWrapping="Wrap" Text="Adresse"/>
-                    <TextBox x:Name="Adresse_TextBox" Margin="56.72,112,0,119.16" TextWrapping="Wrap" HorizontalAlignment="Left" Width="153.28"/>
-                    <TextBox x:Name="CP_TextBox" Margin="215,112,208.72,119.16" TextWrapping="Wrap"/>
+                    <Button x:Name="Afficher" Content="Afficher" Margin="135,0,0,217" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="75" Click="Afficher_Click"/>
+                    <TextBlock x:Name="Prix_TextBlock" HorizontalAlignment="Left" Margin="10,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="16"><Run Text="Prix"/><LineBreak/><Run/></TextBlock>
+                    <TextBox x:Name="Prix_TextBox" Height="16" Margin="44,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="67"/>
+                    <TextBlock x:Name="Nom_TextBlock" HorizontalAlignment="Left" Height="16" Margin="135,41,0,0" TextWrapping="Wrap" Text="Nom" VerticalAlignment="Top" Width="31"/>
+                    <TextBox x:Name="Nom_TextBox" Height="16" Margin="171,41,225,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="Cat_TextBlock" HorizontalAlignment="Right" Margin="0,41,121,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="16" Text="Catégorie prix"/>
+                    <TextBox x:Name="Cat_TextBox" Height="16" Margin="0,41,10,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Right" Width="93"/>
+                    <TextBlock x:Name="Description_TextBlock" HorizontalAlignment="Left" Margin="10,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="16" Text="Description"/>
+                    <TextBox x:Name="Description_TextBox" Height="38" Margin="75,62,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="Adresse_TextBlock" HorizontalAlignment="Left" Margin="10,112,0,119" TextWrapping="Wrap" Text="Adresse"/>
+                    <TextBox x:Name="Adresse_TextBox" Margin="57,112,0,119" TextWrapping="Wrap" HorizontalAlignment="Left" Width="154"/>
+                    <TextBox x:Name="CP_TextBox" Margin="215,112,208,119" TextWrapping="Wrap"/>
                     <TextBox x:Name="Ville_TextBox" Margin="0,112,121,119" TextWrapping="Wrap" HorizontalAlignment="Right" Width="83"/>
-                    <TextBox x:Name="Pays_TextBox" Margin="0,112,10,119.16" TextWrapping="Wrap" HorizontalAlignment="Right" Width="106.693"/>
-                    <TextBlock x:Name="Tel_TextBlock" HorizontalAlignment="Left" Margin="10,0,0,98.24" TextWrapping="Wrap" Text="Tél." Height="15.92" VerticalAlignment="Bottom"/>
+                    <TextBox x:Name="Pays_TextBox" Margin="0,112,10,119" TextWrapping="Wrap" HorizontalAlignment="Right" Width="107"/>
+                    <TextBlock x:Name="Tel_TextBlock" HorizontalAlignment="Left" Margin="10,0,0,98" TextWrapping="Wrap" Text="Tél." Height="16" VerticalAlignment="Bottom"/>
                     <TextBox x:Name="Tel_PreTextBox" Margin="44,0,0,98" TextWrapping="Wrap" HorizontalAlignment="Left" Width="31" Height="16" VerticalAlignment="Bottom" Text="+33"/>
                     <TextBox x:Name="Tel_TextBox" Margin="80,0,0,98" TextWrapping="Wrap" HorizontalAlignment="Left" Width="108" Height="16" VerticalAlignment="Bottom"/>
-                    <TextBlock x:Name="Mail_TextBlock" HorizontalAlignment="Left" Margin="193.1,0,0,98.24" TextWrapping="Wrap" Text="Mail" Height="15.92" VerticalAlignment="Bottom"/>
-                    <TextBox x:Name="Mail_TextBox" Margin="220.797,0,10,98.24" TextWrapping="Wrap" Height="15.92" VerticalAlignment="Bottom"/>
-                    <TextBlock x:Name="Web_TextBLock" HorizontalAlignment="Left" Margin="10,0,0,77.32" TextWrapping="Wrap" Text="Web" Height="15.92" VerticalAlignment="Bottom"/>
-                    <TextBox x:Name="Web_TextBox" Margin="44,0,10,77.32" TextWrapping="Wrap" Height="15.92" VerticalAlignment="Bottom"/>
+                    <TextBlock x:Name="Mail_TextBlock" HorizontalAlignment="Left" Margin="193,0,0,98" TextWrapping="Wrap" Text="Mail" Height="16" VerticalAlignment="Bottom"/>
+                    <TextBox x:Name="Mail_TextBox" Margin="221,0,9,98" TextWrapping="Wrap" Height="16" VerticalAlignment="Bottom"/>
+                    <TextBlock x:Name="Web_TextBLock" HorizontalAlignment="Left" Margin="10,0,0,77" TextWrapping="Wrap" Text="Web" Height="16" VerticalAlignment="Bottom"/>
+                    <TextBox x:Name="Web_TextBox" Margin="44,0,10,77" TextWrapping="Wrap" Height="16" VerticalAlignment="Bottom"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Ajouter">
@@ -101,7 +104,13 @@
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
             <TabItem Header="Supprimer">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="Delete" Content="Delete" Margin="138,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="76" Click="Delete_Click"/>
+                    <ComboBox x:Name="Del_Combobox" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding}" DisplayMemberPath="RES_ID"/>
+                </Grid>
             </TabItem>
         </TabControl>
         <Button x:Name="button1" Content="Remplir combos et grille" Margin="120.5,10,135.5,0" Grid.Row="2" VerticalAlignment="Top" Click="button1_Click"/>

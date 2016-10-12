@@ -78,6 +78,7 @@ namespace ClientTripAdvisor
 
             this.dataGrid.DataContext = dt.DefaultView;
             this.Id_ComboBox.DataContext = dt.DefaultView;
+            this.Del_Combobox.DataContext = dt.DefaultView;
         }
 
         private void Id_ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -211,6 +212,27 @@ namespace ClientTripAdvisor
                     // From here on you could deserialize the ResponseContent back again to a concrete C# type using Json.Net
                 }
             }
+            refresh_data();
+        }
+
+        private async void Delete_Click(object sender, RoutedEventArgs e)
+        {
+            if(Del_Combobox.Text != null)
+            {
+                using (var httpClient = new HttpClient())
+                {
+
+                    // Do the actual request and await the response
+                    var httpResponse = await httpClient.DeleteAsync(urlAPI + "Restaurant/" + Del_Combobox.Text);
+                }
+            }
+            refresh_data();
+        }
+
+        private void refresh_data()
+        {
+            this.button_Click(null, null);
+            this.button1_Click(null, null);
         }
     }
 }
