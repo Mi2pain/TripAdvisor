@@ -101,14 +101,43 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Modifier">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <ComboBox x:Name="Id_ComboBox_mod" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="0,10,0,0" SelectionChanged="Id_ComboBox_SelectionChanged" ItemsSource="{Binding}" DisplayMemberPath="RES_ID"/>
+                    <Button x:Name="Afficher_Modifier_mod" Content="Afficher restaurant à modifier" Margin="135,0,161.5,217" VerticalAlignment="Bottom" Click="Afficher_modifier_Click"/>
+                    <TextBlock x:Name="Prix_TextBlock_mod" HorizontalAlignment="Left" Margin="10,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="16"><Run Text="Prix"/><LineBreak/><Run/></TextBlock>
+                    <TextBlock x:Name="Nom_TextBlock_mod" HorizontalAlignment="Left" Height="16" Margin="135,41,0,0" TextWrapping="Wrap" Text="Nom" VerticalAlignment="Top" Width="31"/>
+                    <TextBox x:Name="Nom_TextBox_mod" Height="16" Margin="171,41,225,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="Cat_TextBlock_mod" HorizontalAlignment="Right" Margin="0,41,121,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="16" Text="Catégorie prix"/>
+                    <TextBox x:Name="Cat_TextBox_mod" Height="16" Margin="0,41,10,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Right" Width="93"/>
+                    <TextBlock x:Name="Description_TextBlock_mod" HorizontalAlignment="Left" Margin="10,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="16" Text="Description"/>
+                    <TextBox x:Name="Description_TextBox_mod" Height="38" Margin="75,62,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="Adresse_TextBlock_mod" HorizontalAlignment="Left" Margin="10,112,0,119" TextWrapping="Wrap" Text="Adresse"/>
+                    <TextBox x:Name="Adresse_TextBox_mod" Margin="57,112,0,119" TextWrapping="Wrap" HorizontalAlignment="Left" Width="154"/>
+                    <TextBox x:Name="CP_TextBox_mod" Margin="215,112,208,119" TextWrapping="Wrap"/>
+                    <TextBox x:Name="Ville_TextBox_mod" Margin="0,112,121,119" TextWrapping="Wrap" HorizontalAlignment="Right" Width="83"/>
+                    <TextBox x:Name="Pays_TextBox_mod" Margin="0,112,10,119" TextWrapping="Wrap" HorizontalAlignment="Right" Width="107"/>
+                    <TextBlock x:Name="Tel_TextBlock_mod" HorizontalAlignment="Left" Margin="10,0,0,98" TextWrapping="Wrap" Text="Tél." Height="16" VerticalAlignment="Bottom"/>
+                    <TextBox x:Name="Tel_PreTextBox_mod" Margin="44,0,0,98" TextWrapping="Wrap" HorizontalAlignment="Left" Width="31" Height="16" VerticalAlignment="Bottom" Text="+33"/>
+                    <TextBox x:Name="Tel_TextBox_mod" Margin="80,0,0,98" TextWrapping="Wrap" HorizontalAlignment="Left" Width="108" Height="16" VerticalAlignment="Bottom"/>
+                    <TextBlock x:Name="Mail_TextBlock_mod" HorizontalAlignment="Left" Margin="193,0,0,98" TextWrapping="Wrap" Text="Mail" Height="16" VerticalAlignment="Bottom"/>
+                    <TextBox x:Name="Mail_TextBox_mod" Margin="221,0,9,98" TextWrapping="Wrap" Height="16" VerticalAlignment="Bottom"/>
+                    <TextBlock x:Name="Web_TextBLock_mod" HorizontalAlignment="Left" Margin="10,0,0,77" TextWrapping="Wrap" Text="Web" Height="16" VerticalAlignment="Bottom"/>
+                    <TextBox x:Name="Web_TextBox_mod" Margin="44,0,10,77" TextWrapping="Wrap" Height="16" VerticalAlignment="Bottom"/>
+                    <Button x:Name="modifier_button" Content="Modifier" Margin="193,0,195,38.04" VerticalAlignment="Bottom" Click="modifier_button_Click"/>
+                    <ComboBox x:Name="comboBox1_mod" HorizontalAlignment="Left" Height="15.92" Margin="44,41.08,0,0" VerticalAlignment="Top" Width="86">
+                        <ComboBoxItem Content="€"/>
+                        <ComboBoxItem Content="€€"/>
+                        <ComboBoxItem Content="€€€"/>
+                        <ComboBoxItem Content="€€€€"/>
+                    </ComboBox>
+                </Grid>
             </TabItem>
             <TabItem Header="Supprimer">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <Button x:Name="Delete" Content="Delete" Margin="138,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="76" Click="Delete_Click"/>
+                    <Button x:Name="Delete" Content="Supprimer" Margin="138,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="76" Click="Delete_Click"/>
                     <ComboBox x:Name="Del_Combobox" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding}" DisplayMemberPath="RES_ID"/>
                 </Grid>
             </TabItem>
