@@ -9,6 +9,7 @@ using System.Net.Http;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
+using RestApiWebCall.RestApiWebCall;
 
 namespace ClientTripAdvisor
 {
@@ -17,44 +18,27 @@ namespace ClientTripAdvisor
     /// </summary>
     public partial class MainWindow : Window
     {
-        string urlAPI = "http://localhost:2729/api/";
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private async void button_Click(object sender, RoutedEventArgs e)
         {
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(urlAPI + "Restaurant");
+                var response = await ResponseApiWebCall.getAsyncAllResto();
+                
+                // Get the stream associated with the response. 
+                Stream receiveStream = response.GetResponseStream();
 
-           if(comboBox.SelectedIndex == 1)
-                // XML
-            {
-                request.Accept = "application/xml";
+                // Pipes the stream to a higher level stream reader with the required encoding format.  
+                StreamReader readStream = new StreamReader(receiveStream, Encoding.UTF8);
+
+                textBox.Clear();
+                textBox.AppendText(readStream.ReadToEnd());
+
+                readStream.Close();
             }
-            else
-            //JSON
-            {
-                request.Accept = "application/json";
-            }
-            // Set some reasonable limits on resources used by this request 
-            request.MaximumAutomaticRedirections = 4;
-            request.MaximumResponseHeadersLength = 4;
-            // Set credentials to use for this request. 
-            request.Credentials = CredentialCache.DefaultCredentials;
-            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
 
-            // Get the stream associated with the response. 
-            Stream receiveStream = response.GetResponseStream();
-
-            // Pipes the stream to a higher level stream reader with the required encoding format.  
-            StreamReader readStream = new StreamReader(receiveStream, Encoding.UTF8);
-
-            textBox.Clear();
-            textBox.AppendText(readStream.ReadToEnd());
-
-            response.Close();
-            readStream.Close();
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
